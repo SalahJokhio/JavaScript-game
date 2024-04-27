@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Dice</title>
+    <style>
+        .game {
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+
+        .game h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+
+        .game input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s ease;
+            margin-top: 10px;
+            width: 80%;
+        }
+
+        .game button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+
+        .game button:hover {
+            background-color: #45a049;
+        }
+
+
+        .game #win_loss {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+
+        .game p {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+
+        #input_dice {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s ease;
+            width: 200px;
+        }
+
+
+        #input_dice::placeholder {
+            color: #999;
+        }
+
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none;
+            transition: background-color 0.3s ease;
+        }
+
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        @keyframes firework {
+            0% {
+                transform: translateY(0) rotate(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-200px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .firework {
+            position: relative;
+        }
+
+        .firework:before {
+            content: '🎉';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 48px;
+            animation: firework 4s ease forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h1>Number Methods</h1>
+    <ul>
+        <li><b>Math.round()</b> , ye number ko round off krdeta hun </li>
+        <li><b>Math.floor()</b> , ye decimal hata deta he or original number   </li>
+        <li><b>Math.ceil()</b> , 1  number add krdeta he </li>
+    </ul> -->
+
+
+    <!-- <h1 id="random">Random Number</h1>
+    <button onclick="generateOTPNumber()">Generate OTP Number</button> -->
+
+    <!-- <input type="text" maxlength="1" id="dice_input" placeholder="Try your luck">
+    <h1 id="dice">Dice Number</h1>
+    <h1 id="win_loss"></h1>
+    <button onclick="generateDiceNumber()">Try your luck</button> -->
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <div class="game">
+
+        <h1 id="dice">Number Game</h1>
+        <input type="text" maxlength="1" id="input_dice" placeholder="Luck aazma">
+        <button onclick="gendicenumber()">Luck Ko aazmao</button>
+
+        <h1 id="win_loss"></h1>
+        <p id="turns_left">Life: 10</p>
+        <p id="correct_attempts">Sahi Jawab: 0</p>
+        <p id="wrong_attempts">Ohh Galat Jawab: 0</p>
+    </div>
+
+
+
+    <!-- <h1 id="password">Random Password</h1>
+    <button onclick="generatePassword()">Generate</button> -->
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
