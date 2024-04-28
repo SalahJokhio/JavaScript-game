@@ -98,6 +98,15 @@
             background-color: #45a049;
         }
 
+        h3 {
+            margin-top: 100px;
+            margin-right: 200px;
+        }
+
+        span {
+            color: blue;
+        }
+
         @keyframes firework {
             0% {
                 transform: translateY(0) rotate(0);
@@ -150,16 +159,17 @@
     <br>
 
 
-    <div class="game">
+    <div class="game" id="game">
 
         <h1 id="dice">Number Game</h1>
-        <input type="text" maxlength="1" id="input_dice" placeholder="Luck aazma">
+        <input type="text" maxlength="1" id="input_dice" placeholder="Luck aazma" autofocus>
         <button onclick="gendicenumber()">Luck Ko aazmao</button>
 
         <h1 id="win_loss"></h1>
         <p id="turns_left">Life: 10</p>
         <p id="correct_attempts">Sahi Jawab: 0</p>
         <p id="wrong_attempts">Ohh Galat Jawab: 0</p>
+        <h3>Made by <span>Thekeydaar</span></h3>
     </div>
 
 
